@@ -9,9 +9,10 @@ import Layout from '../../../../components/Layout'
 import { fileURLToPath } from 'url'
 
 const octokit = new Octokit({ auth: `${process.env.NEXT_PUBLIC_PAT}` })
+const graphql_token = `token ${process.env.NEXT_PUBLIC_PAT}`
 const graphqlWithAuth = graphql.defaults({
   headers: {
-    authorization: `token ${process.env.NEXT_PUBLIC_PAT}`,
+    authorization: graphql_token,
   },
 });
 
