@@ -1,20 +1,6 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
 import Layout from '../components/Layout'
-import { getNamedRouteRegex } from 'next/dist/shared/lib/router/utils/route-regex'
-
-import datamap from '../public/datamap.png'
-import community from '../public/community.png'
-import knowledge from '../public/knowledge.png'
-import co2 from '../public/co2emission.png'
-import coal from '../public/coal.png'
-import fossil from '../public/fissiol.png'
-import ghg from '../public/ghgemission.png'
-import renewable from '../public/renewable.png'
-import nature from '../public/nature.svg'
 
 const Home: NextPage = () => {
   return (
