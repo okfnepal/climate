@@ -61,13 +61,13 @@ const Resources: NextPage = (props: any) => {
                                     <div className='border-2 max-w-2xl py-4 mx-20 mb-4 pl-4 rounded-lg' key={key}>
                                         <Link href={{
                                             pathname: `/resource/data/[category]/[dataset]`,
-                                            query: { dataset: item.name, category: item.path.split('/')[1], url: item._links.self, sha: item.sha },
+                                            query: { dataset: item.name, category: item.path.split('/')[1] },
                                         }}><a className='text-lg px-2 font-bold'> {item.name}</a></Link>
                                         <div className='flex p-2 space-x-10'>
                                             <Link href={item.html_url}><a target='_blank' className='text-xs font-light'>View in Github</a></Link>
                                             <Link href={{
                                                 pathname: `/resource/data/[category]/[dataset]`,
-                                                query: { dataset: item.name, category: item.path.split('/')[1], url: item._links.self, sha: item.sha },
+                                                query: { dataset: item.name, category: item.path.split('/')[1] },
                                             }}><a target='_blank' className='text-xs font-light'>View Details</a></Link>
                                         </div>
                                     </div>
