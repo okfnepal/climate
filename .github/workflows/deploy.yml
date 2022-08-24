@@ -19,6 +19,8 @@ jobs:
         run: npm ci
       - name: Building App
         run: npm run build && npm run export && touch ./out/.nojekyll
+        env:
+          NEXT_PUBLIC_PAT: "${{ secrets.NEXT_PUBLIC_PAT }}"
       - name: "Deploy"
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
