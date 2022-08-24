@@ -63,8 +63,8 @@ export default function Nav() {
                                     </div>
                                 </div>
                                 <div className="flex-shrink-0 flex items-center">
-                                    <Link href="https://github.com/okfnepal/climatedata">
-                                        <a className='text-lg font-medium'>
+                                    <Link href="https://github.com/okfnepal/climatedata" passHref>
+                                        <a className='text-lg font-medium' target='_blank'>
                                             Github
                                             {/* <Image src={github} height={30} width={30} /> */}
                                         </a>

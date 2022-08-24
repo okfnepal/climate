@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       <div className='max-w-7xl mx-auto px-8 mt-8 mb-32'>
         <div className='mt-40'>
           <h2 className='max-w-fit mx-auto text-xl text-slate-800 font-light mb-3'>
-            Climate Knowledge Portal for climate actions and adaptions
+            Climate Knowledge Portal for Climate Actions and Adaptions
           </h2>
           <h2 className='max-w-fit mx-auto text-3xl text-slate-800 font-bold'>
             Climate Knowledge Portal for Climate Actions and Adaptions
