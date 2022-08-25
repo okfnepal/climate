@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 
 const Home: NextPage = () => {
   return (
-    <Layout title='home'>
+    <Layout title='Homepage'>
       <div className='max-w-7xl mx-auto px-8 mt-8 mb-32'>
         <div className='mt-40'>
           <h2 className='max-w-fit mx-auto text-xl text-slate-800 font-light mb-3'>
