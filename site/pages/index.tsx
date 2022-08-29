@@ -54,10 +54,7 @@ const Home: NextPage = (props: any) => {
       <div className='mt-28 max-w-7xl mx-auto px-8 mt-8 mb-32 text-slate-800'>
 
         <div className='grid grid-cols-6 max-h-max'>
-          <div className='mt-16 col-span-4 '>
-            {/* <h2 className='max-w-fit mx-auto text-xl text-slate-800 font-light mb-3'>
-              Climate Knowledge Portal for Climate Actions and Adaptions
-            </h2> */}
+          <div className='mt-28 sm:col-span-4 col-span-6 '>
             <h2 className='max-w-fit mx-auto text-4xl text-slate-800 font-bold'>
               Explore, Find, Suggest the Climate Datasets, Reports, Articles relating to Nepal
             </h2>
@@ -83,17 +80,19 @@ const Home: NextPage = (props: any) => {
         </div>
         <div className='mt-16'>
           <h2 className='text-2xl font-semibold my-8'>Climate Datasets</h2>
-          <div className='grid grid-cols-3 gap-8'>
+          <div className='grid sm:grid-cols-3 gap-8 '>
             {props.data.map((item: any, key: any) => {
               return (
                 <div className='border-2 border-slate-600 bg-white p-4 px-6 w-11/12 h-full' key={key}>
-                  <h3 className='text-lg font-semibold pb-2'>{item.params.dataset.split('-').join(' ')}</h3>
+                  <Link href={`/resource/data/${item.params.category}/${item.params.dataset}`} passHref>
+                    <a className='text-lg font-semibold pb-2'>{item.params.dataset.split('-').join(' ')}</a>
+                  </Link>
                   <p className='p-0.5 max-w-fit text-xs font-light bg-gray-300 mb-6'>{item.params.category}</p>
                   <div className='mb-4'>
-                    <Link href={`${item.params.data.html_url}`} passHref>
-                      <a target='_blank' className='text-base border-slate-700 border-2 p-1 px-3 mr-4 mb-8 bg-slate-800 text-white font-medium hover:text-black hover:bg-slate-400'>Explore</a>
-                    </Link>
                     <Link href={`/resource/data/${item.params.category}/${item.params.dataset}`} passHref>
+                      <a className='text-base border-slate-700 border-2 p-1 px-3 mr-4 mb-8 bg-slate-800 text-white font-medium hover:text-black hover:bg-slate-400'>Explore</a>
+                    </Link>
+                    <Link href={`${item.params.data.html_url}`} passHref>
                       <a target='_blank' className='text-base border-2 border-slate-700 p-1 px-3 mr-4 font-medium hover:bg-gray-300 hover:text-slate-500'>Github</a>
                     </Link>
                   </div>
@@ -111,7 +110,7 @@ const Home: NextPage = (props: any) => {
 
         <div className='mt-16'>
           <h2 className='text-2xl font-semibold my-8'>Reports and Researches</h2>
-          <div className='grid grid-cols-3 gap-8'>
+          <div className='grid sm:grid-cols-3 gap-8'>
             {props.journals.slice(0, 3).map((item: any, key: any) => {
 
               return (

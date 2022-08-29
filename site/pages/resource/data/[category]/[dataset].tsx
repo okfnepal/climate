@@ -7,6 +7,7 @@ import Breadcrumbs from 'nextjs-breadcrumbs'
 import Layout from '../../../../components/Layout'
 import { fileURLToPath } from 'url'
 import { getDatasetsPaths } from '../../../../lib/github_rest'
+import ResourcesNav from '../../../../components/ResourceNav'
 
 const octokit = new Octokit({ auth: `${process.env.NEXT_PUBLIC_PAT}` })
 
@@ -45,23 +46,7 @@ const Res: NextPage = (props: any) => {
   return (
     <Layout title='Resources'>
       <div className='max-w-7xl mx-auto px-8 my-10'>
-        <div className='flex justify-between mb-8 mt-16 border-b-2 pb-2'>
-          <div className='flex space-x-8 self-end max-w-2xl '>
-            <h2 className={`font-medium ${router.pathname.split('/')[2] === 'data' ? "text-blue-400" : ""}`}>
-              <Link href='/resource/data'>Data</Link>
-            </h2>
-            <h2 className={`font-medium ${router.pathname.split('/')[2] === 'journals' ? "text-blue-400" : ""}`}>
-              <Link href='/resource/data'>Resource</Link>
-            </h2>
-            <h2 className={`font-medium ${router.pathname.split('/')[2] === 'articles' ? "text-blue-400" : ""}`}>
-              <Link href='/resource/data'>Articles</Link>
-            </h2>
-            <h2 className={`font-medium ${router.pathname.split('/')[2] === 'licensing' ? "text-blue-400" : ""}`}>
-              <Link href='/resource/data'>Licensing Info</Link>
-            </h2>
-          </div>
-          <button className=' border-indigo-200 border-2 text-sm text-slate-800 py-1 px-3 rounded-lg hover:bg-neutral-700 hover:text-slate-500 self-start'>+ Suggest Resource</button>
-        </div>
+        <ResourcesNav />
 
         <div className='w-full'>
           <Breadcrumbs
@@ -79,17 +64,17 @@ const Res: NextPage = (props: any) => {
             replaceCharacterList={[{ from: '%20', to: '&gt;' }]}
             rootLabel="Home"
           />
-          <div className='mt-16  max-w-3xl mx-auto'>
-            <h3 className='py-2 mb-4 text-3xl'>{props.query.dataset}</h3>
+          <div className='mt-16  max-w-3xl'>
+            <h3 className='py-2 mb-4 text-3xl'>{props.query.dataset.split('-').join(' ')}</h3>
             <div className=''>
-              <div className='grid grid-cols-4'>
-                <div className='col-span-3 my-2 text-lg'>Data Files </div>
+              <div className='grid grid-cols-4  max-w-4xl'>
+                <div className='col-span-3 my-2 text-lg mb-2'>Data Files </div>
                 {data.map((item: any, key: any) => {
                   return (
-                    <div className={`max-w-4xl col-span-4 grid grid-cols-6 py-3 px-4 ${key % 2 === 0 ? 'bg-zinc-300' : `bg-zinc-200`}`} key={key}>
-                      <div className='col-span-3 text-sm'>{item.name}</div>
+                    <div className={`max-w-2xl col-span-4 grid grid-cols-5 py-3 px-4 ${key % 2 === 0 ? 'bg-zinc-300' : `bg-zinc-200`}`} key={key}>
+                      <div className='col-span-4 text-sm'>{item.name}</div>
                       {/* <div className='text-base'>{re.exec(item.name)[1]}</div> */}
-                      <div className='text-base'>{item.type}</div>
+                      {/* <div className='text-base'>{item.type}</div> */}
                       <div>
                         <Link href={item._links.html} passHref>
                           <a target='_blank' className='text-sm mr-4 text-slate-800'>Github</a>
@@ -105,7 +90,7 @@ const Res: NextPage = (props: any) => {
                 )}
               </div>
               <div className='flex mx-20 max-w-2xl'>
-                <div className=' flex mx-auto mt-4'>
+                {/* <div className=' flex mx-auto mt-4'>
 
                   {pageArr.map((item: any, key: any) => {
                     return (
@@ -114,7 +99,7 @@ const Res: NextPage = (props: any) => {
                       </button>
                     )
                   })}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

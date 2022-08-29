@@ -23,9 +23,9 @@ export default function Nav() {
         <Disclosure as="nav">
             {({ open }) => (
                 <>
-                    <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 mt-3">
-                        <div className="relative flex items-center h-16 ">
-                            <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8 mt-3">
+                        <div className="relative flex items-center h-16">
+                            <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
                                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                                     <span className="sr-only">Open main menu</span>
@@ -36,10 +36,10 @@ export default function Nav() {
                                     )}
                                 </Disclosure.Button>
                             </div>
-                            <div className="flex flex-1  lg:justify-between sm:items-stretch sm:justify-between  w-full">
+                            <div className="flex sm:flex-1  lg:justify-between sm:items-stretch sm:justify-between  sm:w-full">
                                 <div className="flex-shrink-0 flex items-center">
                                     <Link href="/">
-                                        <a className='text-xl text-slate-800 font-bold'>
+                                        <a className='text-xl text-slate-800 font-bold pl-6 sm:pl-0'>
                                             Climate Knowledge Nepal
                                         </a>
                                     </Link>
