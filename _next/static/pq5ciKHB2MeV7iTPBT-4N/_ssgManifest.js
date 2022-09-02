@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F","\u002Fresource\u002Fdata","\u002Fresource\u002Fdata\u002F[category]","\u002Fresource\u002Fdata\u002F[category]\u002F[dataset]","\u002Fresource\u002Fjournals","\u002Fresource\u002Fjournals\u002F[category]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
