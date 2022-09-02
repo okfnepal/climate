@@ -5,6 +5,9 @@ const nextConfig = {
   images: {
     loader: 'akamai',
     path: '',
+  },
+  env: {
+    PUBLIC_URL: '/',
   }
 }
 

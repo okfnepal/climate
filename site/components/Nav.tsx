@@ -41,7 +41,7 @@ export default function Nav() {
                                 <div className="flex-shrink-0 flex items-center">
                                     <Link href="/">
                                         <a className='text-2xl text-slate-800 font-bold pl-6 sm:pl-0'>
-                                            <Image src={oknlogo} height={50} width={118} alt='okn' />
+                                            <Image src={`${process.env.PUBLIC_URL}/okn.png`} height={50} width={118} alt='okn' />
                                         </a>
                                     </Link>
                                 </div>
