@@ -21,7 +21,7 @@ export async function getDatasetsPaths() {
         const staticPaths: any = []
         response.map((item: any) => {
             item.data.map((items: any) => {
-                staticPaths.push({ params: { dataset: `${items.name}`, category: items.path.split('/')[1] } })
+                staticPaths.push({ params: { dataset: `${items.name}`, category: items.path.split('/')[1], data: items } })
             })
         })
         return staticPaths

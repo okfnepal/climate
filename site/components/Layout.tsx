@@ -7,8 +7,8 @@ export default function Layout({ children, title = 'Home' }: any) {
     return (
         <>
             <Head>
-                <title>{title}{title && ' - '}Climate Knowledge Portal 🌍</title>
-                <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 120%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>" />
+                <title>{title}{title && ' - '}Climate Knowledge Portal</title>
+                <link rel="icon" href="/favicon.ico" />
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,16 +22,23 @@ export default function Layout({ children, title = 'Home' }: any) {
             <main>
                 {children}
             </main>
-            <footer className="flex items-center justify-center w-full h-24 border-t ">
-                <a
-                    className="flex items-center justify-center"
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    A Project of
-                    Open Knowledge Nepal
-                </a>
+            <div className='border-t-2'></div>
+            <footer className="flex items-center  w-full h-24  max-w-7xl mx-auto">
+                <p className='ml-6'>
+                    Made by
+                </p>
+                <Link href='https://oknp.org/' passHref>
+                    <a
+                        className="flex items-center justify-center ml-2 underline"
+                        href="/oknp.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Open Knowledge Nepal</a>
+                </Link>
+
+                <p className='ml-2'>- “Liberating Knowledge for Opportunity”</p>
+
             </footer>
         </>
     )

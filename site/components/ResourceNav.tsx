@@ -13,7 +13,7 @@ export default function ResourcesNav() {
                     <Link href='/resource/journals'>Journals</Link>
                 </h2>
                 <h2 className={`font-medium ${router.pathname.split('/')[2] === 'articles' ? "text-slate-800 underline decoration-2 underline-offset-8" : ""}`}>
-                    <Link href='/resource/articles'>Sources</Link>
+                    <Link href='/resource/sources'>Sources</Link>
                 </h2>
             </div>
             <button className=' border-slate-700 border-2 text-sm text-slate-800 py-1 px-3 hover:bg-neutral-700 hover:text-slate-500 self-start'>+ Suggest Resource</button>

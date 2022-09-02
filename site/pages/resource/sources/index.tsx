@@ -9,10 +9,10 @@ const Contribute: NextPage = (props: any) => {
         <Layout title='readings'>
             <div className='max-w-7xl mx-auto px-8 mt-10'>
                 <ResourcesNav />
-                <div className='max-w-xl mx-auto mt-16'>
+                <div className='max-w-xl mx-auto mt-16 mb-40'>
                     <h3 className='text-3xl my-4'>Resources Mapping</h3>
                     <p className='text-base mb-8'>
-                        This section will map the data sources
+                        Coming Soon...
                     </p>
                 </div>
             </div>

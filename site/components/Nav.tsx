@@ -4,14 +4,15 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
 import Link from 'next/link'
 import github from '../public/github.png'
+import oknlogo from '../public/okn.png'
 
 const navigation = [
     { name: 'Home', href: '/', current: false },
     // { name: 'Notes', href: '/notes/', current: false },
     { name: 'Resources', href: '/resource/data', current: false },
-    { name: 'Playbook', href: '/playground', current: false },
+    { name: 'Playbook', href: '/playbook', current: false },
+    { name: 'Stakeholders', href: '/stakeholders', current: false },
     { name: 'Contribute', href: '/contribute', current: false },
-    { name: 'Github', href: 'https://github.com/okfnepal/climatedata', current: false }
 ]
 
 function classNames(...classes: any) {
@@ -36,11 +37,11 @@ export default function Nav() {
                                     )}
                                 </Disclosure.Button>
                             </div>
-                            <div className="flex sm:flex-1  lg:justify-between sm:items-stretch sm:justify-between  sm:w-full">
+                            <div className="mt-8 flex sm:flex-1  lg:justify-between sm:items-stretch sm:justify-between  sm:w-full">
                                 <div className="flex-shrink-0 flex items-center">
                                     <Link href="/">
-                                        <a className='text-xl text-slate-800 font-bold pl-6 sm:pl-0'>
-                                            Climate Knowledge Nepal
+                                        <a className='text-2xl text-slate-800 font-bold pl-6 sm:pl-0'>
+                                            <Image src={oknlogo} height={50} width={118} alt='okn' />
                                         </a>
                                     </Link>
                                 </div>

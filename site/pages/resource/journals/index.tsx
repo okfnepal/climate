@@ -39,7 +39,7 @@ const Resources: NextPage = (props: any) => {
         pageArr.push(data.slice(i * 10, (i + 1) * 10))
     }
     return (
-        <Layout title='Resources'>
+        <Layout title='Journals'>
             <div className='max-w-7xl mx-auto px-8 my-10 text-slate-800'>
                 <ResourcesNav />
                 <Breadcrumbs

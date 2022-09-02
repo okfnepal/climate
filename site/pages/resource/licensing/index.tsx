@@ -6,7 +6,7 @@ import ResourcesNav from '../../../components/ResourceNav'
 
 const Contribute: NextPage = (props: any) => {
     return (
-        <Layout title='readings'>
+        <Layout title='Resources'>
             <div className='max-w-7xl mx-auto px-8 mt-10'>
                 <ResourcesNav />
                 <div className='max-w-xl mx-auto mt-16'>
